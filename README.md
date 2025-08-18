@@ -10,7 +10,7 @@ Here, we provide overview of all the released artifacts and further infos for re
 
 ### Load open-sci models using HF transformers
 
-_Note: We do not advise you to use base language models for text generation. Instead, you can apply post-training, e.g., SFT_
+_Note: We do not advise you to use base language models for conversation-based interaction. For this, post-training should be applied, e.g., SFT, RLHF etc._
 
 ```python
 # transformers >= 4.49.0
@@ -18,7 +18,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "open-sci/open-sci-ref-v0.01-1.7b-nemotron-hq-1T-4096-rope_theta-100k"
 
-tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True, padding_side='left')
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
     torch_dtype="auto",
@@ -26,8 +26,11 @@ model = AutoModelForCausalLM.from_pretrained(
     trust_remote_code=True
 )
 
-prompt = "Tokyo is"
-inputs = tokenizer(prompt, return_tensors="pt").to("cuda")
+
+prompts = ["Tokyo is", "Cologne is", "Freiburg is", "Helsinki is", "Tuebingen is"]
+
+tokenizer.pad_token_id = tokenizer.eos_token_id
+inputs = tokenizer(prompts, return_tensors="pt", padding=True, truncation=True).to("cuda")
 output = model.generate(
     **inputs,
     max_length=48,
@@ -36,6 +39,6 @@ output = model.generate(
     top_p=0.9,
     pad_token_id=tokenizer.eos_token_id,
 )
-generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
-print(generated_text)
+generated_text = tokenizer.batch_decode(output, skip_special_tokens=True)
+print("\n\n".join(generated_text))
 ```

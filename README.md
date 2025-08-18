@@ -10,7 +10,7 @@ Here, we provide overview of all the released artifacts and further infos for re
 
 ### Load open-sci models using HF transformers
 
-_Note: We do not advise you to use base language models for conversation-based interaction. For this, post-training should be applied, e.g., SFT, RLHF etc._
+_Note: the reference baseline models are research base models, and while capable of text generation, those are not meant for conversation-based interaction. For this, multi-stage post-training should be applied, e.g., SFT, RLHF etc._
 
 ```python
 # transformers >= 4.49.0

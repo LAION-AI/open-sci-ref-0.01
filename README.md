@@ -8,7 +8,7 @@ Here, we provide overview of all the released artifacts and further infos for re
 
 ## Obtaining the models
 
-We release models and intermediate checkpoints under Apache 2.0 license via [HugginFace open-sci-ref collection](https://huggingface.co/collections/open-sci/open-sci-ref-001-685905e598be658fbcebff4f).
+We release models and intermediate checkpoints under Apache 2.0 license via [HugginFace open-sci-ref collection](https://huggingface.co/collections/open-sci/open-sci-ref-001-685905e598be658fbcebff4f). The  collection contains subcollections for each reference dataset, holding 0.13B, 0.4B, 1.3B, 1.7B models trained on 300B (all datasets) and 1T (DCLM, FineWeb-Edu, Nemontron-CC-HQ) tokens of the given reference dataset. For C4, also 50B token scale is available. 
 
 
 ## Usage

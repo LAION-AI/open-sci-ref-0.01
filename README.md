@@ -1,10 +1,15 @@
 # Open-sci-ref 0.01 release
 
-We release open-sci-ref 0.01 - a research dense transformer model family with all the intermediate checkpoints trained on 8 different reference open datasets (C4, Pile, SlimPajama, FineWeb-Edu-1.4T (v1.0.0), DCLM-baseline, Nemotron-CC-HQ, HPLT-2.0 (english subset), and CommonCorpus) on various model (0.13B - 0.4B - 1.3B - 1.7B) and token (50B, 300B, 1T) scales to serve as baselines for comparison and for studies on training dynamics. Our release includes all intermediate model weights, logs and training workflow code to enable easy learning procedure comparison on available reference scales and datasets and to support future research.
+We release open-sci-ref 0.01 - a research dense transformer model family with all the intermediate checkpoints trained on 8 different reference open datasets (C4, Pile, SlimPajama, FineWeb-Edu-1.4T (v1.0.0), DCLM-baseline, Nemotron-CC-HQ, HPLT-2.0 (english subset), and CommonCorpus) on various model (0.13B - 0.4B - 1.3B - 1.7B) and token (50B, 300B, 1T) scales to serve as baselines for comparison and for studies on training dynamics. Our release includes all intermediate model weights, logs and training workflow code to enable easy learning procedure comparison on available reference scales and datasets and to support future research. All artifacts are released under permissive Apache 2.0 licence.
 
 See the [Open-sci-ref 0.01 research release blog](https://laion.ai/blog/open-sci-ref-001/) for more details.
 
 Here, we provide overview of all the released artifacts and further infos for reproducing training and evaluation. The page is continuously updated.
+
+## Obtaining the models
+
+We release models and intermediate checkpoints under Apache 2.0 license via [HugginFace open-sci-ref collection](https://huggingface.co/collections/open-sci/open-sci-ref-001-685905e598be658fbcebff4f).
+
 
 ## Usage
 
@@ -41,4 +46,26 @@ output = model.generate(
 )
 generated_text = tokenizer.batch_decode(output, skip_special_tokens=True)
 print("\n\n".join(generated_text))
+```
+
+## Citation
+If you like this work, please cite:
+
+```
+
+@misc{opensciref001repo,
+  author = {Nezhurina, Marianna and Franke, Joerg and Nakamura, Taishi, and Carstensen, Timur, and Ajroldi, Niccolò and Komulainen, Ville, and Salinas, David and Jitsev, Jenia},
+  title = {Open-sci-ref-0.01 repository},
+  year = {2025},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/LAION-AI/open-sci-ref-0.01}},
+}
+
+@misc{opensciref001blog,
+  author = {Nezhurina, Marianna and Franke, Joerg and Nakamura, Taishi, and Carstensen, Timur, and Ajroldi, Niccolò and Komulainen, Ville, and Salinas, David and Jitsev, Jenia},
+  title = {{Open-sci-ref-0.01: open and reproducible reference baselines for language model and dataset comparison}},
+  howpublished = {https://laion.ai/blog/open-sci-ref-001},
+  year = {2025}
+}
 ```

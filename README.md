@@ -48,6 +48,10 @@ generated_text = tokenizer.batch_decode(output, skip_special_tokens=True)
 print("\n\n".join(generated_text))
 ```
 
+## Logs
+
+See [this HuggingFace dataset](https://huggingface.co/datasets/open-sci/open-sci-ref-0.01-logs) to acccess the logs.
+
 ## Citation
 If you like this work, please cite:
 

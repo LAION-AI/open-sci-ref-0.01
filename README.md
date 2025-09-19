@@ -1,8 +1,10 @@
 # Open-sci-ref 0.01 release
 
+<h4 align="center"><a href="https://arxiv.org/abs/2509.09009"target="_blank">arXiv:2509.09009</a>
+
 Open-sci-ref 0.01 is a research dense transformer model family that includes all the intermediate checkpoints trained on 8 different reference open datasets (C4, Pile, SlimPajama, FineWeb-Edu-1.4T (v1.0.0), DCLM-baseline, Nemotron-CC-HQ, HPLT-2.0 (english subset), and CommonCorpus) on various model (0.13B - 0.4B - 1.3B - 1.7B) and token (50B, 300B, 1T) scales. It is suppposed to serve as baselines for comparison and for studies on training dynamics. All artifacts are released under permissive Apache 2.0 licence.
 
-![ScalingCompute](figures/ScalingCompute.pdf)
+<img src="figures/ScalingCompute.svg" alt="ScalingCompute" width="700" />
 
 See the [Open-sci-ref 0.01 research release blog](https://laion.ai/blog/open-sci-ref-001/) for more details.
 
@@ -58,6 +60,13 @@ See [this HuggingFace dataset](https://huggingface.co/datasets/open-sci/open-sci
 If you like this work, please cite:
 
 ```
+
+@article{opensciref001arxiv,
+  title={Open-sci-ref-0.01: open and reproducible reference baselines for language model and dataset comparison},
+  author={Nezhurina, Marianna and Franke, Joerg and Nakamura, Taishi and Carstensen, Timur and Ajroldi, Niccol{\`o} and Komulainen, Ville and Salinas, David and Jitsev, Jenia},
+  journal={arXiv:2509.09009},
+  year={2025}
+}
 
 @misc{opensciref001repo,
   author = {Nezhurina, Marianna and Franke, Joerg and Nakamura, Taishi, and Carstensen, Timur, and Ajroldi, Niccolò and Komulainen, Ville, and Salinas, David and Jitsev, Jenia},

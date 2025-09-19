@@ -1,6 +1,6 @@
 # Open-sci-ref 0.01 release
 
-<h4 align="center"><a href="https://arxiv.org/abs/2509.09009"target="_blank">arXiv:2509.09009</a>
+<h4 align="center"><a href="https://arxiv.org/abs/2509.09009"target="_blank">arXiv:2509.09009</a></h4>
 
 Open-sci-ref 0.01 is a research dense transformer model family that includes all the intermediate checkpoints trained on 8 different reference open datasets (C4, Pile, SlimPajama, FineWeb-Edu-1.4T (v1.0.0), DCLM-baseline, Nemotron-CC-HQ, HPLT-2.0 (english subset), and CommonCorpus) on various model (0.13B - 0.4B - 1.3B - 1.7B) and token (50B, 300B, 1T) scales. It is suppposed to serve as baselines for comparison and for studies on training dynamics. All artifacts are released under permissive Apache 2.0 licence.
 

@@ -56,6 +56,19 @@ print("\n\n".join(generated_text))
 
 See [this HuggingFace dataset](https://huggingface.co/datasets/open-sci/open-sci-ref-0.01-logs) to acccess the logs.
 
+## Reproducibility
+
+### Data and Tokenization
+All datasets can be obtained from HF. For tokenization, see https://github.com/ontocord/mixturevitae/blob/main/tokenize/README.md
+
+### Training
+For reproducing any training run, please check https://github.com/ontocord/mixturevitae/blob/main/train/README.md, which follows exactly the open-sci-ref workflow.
+
+### Evaluation
+For reproducing evaluation, see https://github.com/ontocord/mixturevitae/blob/main/eval/README.md
+
+
+
 ## Citation
 If you like this work, please cite:
 
